@@ -92,17 +92,26 @@ function get(column, row){
 }       
 
 function put(column,color){
+	if (disc ==1 && localStorage.theme!="theme2")
+	document.getElementById("turn").innerHTML='<div style="color:#FFFF00">Yellow Turn</div>';
+	else{
+	if (disc ==1 && localStorage.theme=="theme2")	
+	document.getElementById("turn").innerHTML='<div style="color:#000000">Black Turn</div>';
+	else
+	document.getElementById("turn").innerHTML='<div style="color:#FF0000">Red Turn</div>';
+	
+	}
 		if (color == red) 
 			document.getElementById("board").innerHTML = document.getElementById("board").innerHTML +
-			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="red.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="red.png" width=29 height =42 alt="red disc"> </div>';
 			
 		if (color == yellow) 
 			if (localStorage.theme=="theme2")
 				document.getElementById("board").innerHTML = document.getElementById("board").innerHTML + 
-			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="black.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="black.png" width=29 height =42 alt="black disc"> </div>';
 			else
 				document.getElementById("board").innerHTML = document.getElementById("board").innerHTML + 
-			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="yellow.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="yellow.png" width=29 height =42 alt="yellow disc"> </div>';
 		}
 
 
@@ -156,8 +165,10 @@ function set(column){
 				
 			}
 			if (won != true){
-				if ( disc == red )
+				if ( disc == red ){
 					disc = yellow;
+					
+				}
 				else
 					disc = red ;
 			}

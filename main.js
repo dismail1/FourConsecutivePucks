@@ -55,7 +55,7 @@ function newGame(){
 	
         height1[i] = height1[i] - 1;
 	document.getElementById("board").innerHTML = document.getElementById("board").innerHTML +
-			'<div style="position:absolute; top:'+(height1[i]*52+62)+'px; left:'+(i*34+17)+'px;"><img src="empty.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height1[i]*52+62)+'px; left:'+(i*34+17)+'px;"><img src="empty.png" width=29 height =42 > </div>';
 	height1[i] = height1[i] - 1;
 	document.getElementById("board").innerHTML = document.getElementById("board").innerHTML +
 			'<div style="position:absolute; top:'+(height1[i]*52+62)+'px; left:'+(i*34+17)+'px;"><img src="empty.png" width=29 height =42> </div>';
@@ -91,15 +91,15 @@ function get(column, row){
 function put(column,color){
                if (color == red) 
 			document.getElementById("board").innerHTML = document.getElementById("board").innerHTML +
-			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="red.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="red.png" width=29 height =42 alt="red disc"> </div>';
 			
 		if (color == yellow) {
 			if (localStorage.theme=="theme2")
 				document.getElementById("board").innerHTML = document.getElementById("board").innerHTML + 
-			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="black.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="black.png" width=29 height =42 alt="black disc"> </div>';
 			else
 				document.getElementById("board").innerHTML = document.getElementById("board").innerHTML + 
-			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="yellow.png" width=29 height =42> </div>';
+			'<div style="position:absolute; top:'+(height[column]*52+62)+'px; left:'+(column*34+17)+'px;"><img src="yellow.png" width=29 height =42 alt="yellow disc"> </div>';
 		}
 }
 
