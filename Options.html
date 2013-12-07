@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Connect Four in Javascript</title>
+<meta name="keywords" content="connect four"><meta name="description" content="Small Javascript version of connect four">
+<meta name="author" content="Kalm, Demma, Behrens" >
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="d3.v2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+
+</head>
+<body bgcolor="#0378FF" >
+<embed height="50" width="100" src="connect_4_playing_discs_drop_on_carpeted_floor.mp3" loop="true" hidden="true">
+<div class="container">
+    <!-- Navbar
+      ================================================== -->
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <div class="bs-example">
+              <div class="navbar navbar-default">
+              
+                <div class="navbar-header">
+                   <a class="navbar-brand" href="index.html"><img src="Banar.png" width="75%"></a>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                 
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                 <li><a href="GameOverview.html">Game overview</a></li>
+                <li><a href="HowToPlay.html">How to play</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+                
+                  </ul>
+                  
+                </div><!-- /.nav-collapse -->
+              </div><!-- /.navbar -->
+ <script type="text/javascript">
+ 
+$(document).ready(function() {
+
+  $("#test-button").on("click", function (e) {
+  localStorage.theme=$('input:radio[name=theme]:checked').val();
+  localStorage.sound=$('input:radio[name=sound]:checked').val();
+  localStorage.difficulty=$('input:radio[name=difficulty]:checked').val();
+ // url="index.html?theme="+$('input:radio[name=theme]:checked').val()+"&sound="+$('input:radio[name=sound]:checked').val()
+  //+ "&difficulty="+$('input:radio[name=difficulty]:checked').val();
+		window.location.href = "index.html";
+	});
+});
+
+</script>
+    </script>             
+    <!-- Start Game Menu -->
+     <a id="top"></a>
+    		<div class="hero-unit">
+		<div class="row">
+		<div class="col-md-3"><button type="button" id="test-button" class="btn btn-primary btn-block"><i class="glyphicon glyphicon-arrow-left"></i>Main Menu</button></div>
+		<div class="col-md-6">
+		<!-- Themes -->
+		<center><h2>Options</h2></center>
+		<hr class="featurette-divider">
+<center>
+<h4>Theme</h4>
+
+
+
+<div id="theme" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="theme" id="theme1" value="theme1"><img src="Theme1.png">
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="theme" id="theme2" value="theme2"><img src="Theme2.png">
+  </label>
+</div> 
+</center>
+
+	<!-- Sound -->
+	<center>
+	<h4>Sound</h4>
+
+
+<div id="sound" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="sound" id="on" value="on">On
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="sound" id="off" value="off">Off
+  </label>
+</div>
+</center>
+		<!-- Sound -->
+	<center>
+	<h4>Difficulty</h4>
+
+
+<div id="difficulty" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="difficulty" id="easy" value="easy">Easy
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="difficulty" id="hard" value="hard">Hard
+  </label>
+</div>
+</center>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+</div>			
+
+</div>
+
+<!-- container-->
+<hr class="featurette-divider">
+
+
+<!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#top">Back to top</a></p>
+        <p>&copy; 2013 Loyola University Chicago Computer Science Students<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a></p>
+      </footer>
+<script src="bootstrap/js/jquery.js"></script>
+</body>
+</html>
